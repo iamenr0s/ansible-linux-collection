@@ -1,0 +1,34 @@
+namespace: community
+name: linux
+version: 1.0.0
+description: A collection of Ansible roles and modules for Linux system administration, including user and group management
+readme: README.md
+authors:
+  - Your Name <your.email@example.com>
+license:
+  - GPL-2.0-or-later
+license_file: LICENSE
+tags:
+  - linux
+  - system
+  - administration
+  - automation
+  - users
+  - groups
+  - security
+  - ssh
+dependencies:
+  ansible.posix: '>=1.0.0'
+  community.general: '>=1.0.0'
+repository: https://github.com/yourusername/ansible-linux-collection
+homepage: https://github.com/yourusername/ansible-linux-collection
+issues: https://github.com/yourusername/ansible-linux-collection/issues
+documentation: https://github.com/yourusername/ansible-linux-collection/blob/main/README.md
+build_ignore:
+  - '*.tar.gz'
+  - '.git'
+  - '.gitignore'
+  - '.DS_Store'
+  - 'tests/output'
+  - '.pytest_cache'
+  - '__pycache__'
