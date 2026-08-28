@@ -25,10 +25,13 @@ jobs:
       - name: Build collection
         run: ansible-galaxy collection build .
 
+      - name: Configure Galaxy token
+        run: |
+          echo "${{ secrets.GALAXY_API_KEY }}" > ~/.ansible/galaxy_token
+          chmod 600 ~/.ansible/galaxy_token
+
       - name: Publish collection
         run: ansible-galaxy collection publish $(ls *.tar.gz)
-        env:
-          GALAXY_API_KEY: ${{ secrets.GALAXY_API_KEY }}
 
       - name: Verify publication
         run: |
