@@ -24,7 +24,7 @@ tags:
   - cgroup
   - firewalld
   - networking
-  - etc-hosts
+  - etchosts
   - containerd
   - cri-o
   - containers
