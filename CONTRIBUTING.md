@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for taking the time to contribute to `community.linux`!
+Thanks for taking the time to contribute to `iamenr0s.ansible_linux_collection`!
 
 This is an Ansible collection containing multiple roles vendored as git submodules from `iamenr0s/ansible-role-*` repositories. Individual role logic lives in those upstream repos; this collection aggregates them.
 
@@ -10,7 +10,7 @@ This is an Ansible collection containing multiple roles vendored as git submodul
 .
 ├── galaxy.yml              # Collection metadata
 ├── README.md               # Collection documentation
-├── LICENSE                 # GPL-2.0-or-later
+├── LICENSE                 # MIT
 ├── .gitmodules            # Submodule registrations
 ├── roles/
 │   ├── ansible-role-upgrade/

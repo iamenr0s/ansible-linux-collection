@@ -1,0 +1,36 @@
+name: Publish Collection
+
+on:
+  push:
+    branches:
+      - main
+  release:
+    types: [published]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install ansible ansible-lint
+
+      - name: Build collection
+        run: ansible-galaxy collection build .
+
+      - name: Publish collection
+        run: ansible-galaxy collection publish $(ls *.tar.gz)
+        env:
+          GALAXY_API_KEY: ${{ secrets.GALAXY_API_KEY }}
+
+      - name: Verify publication
+        run: |
+          echo "Collection published successfully"
+          echo "Run: ansible-galaxy collection install ${{ vars.COLLECTION_NAMESPACE }}.${{ vars.COLLECTION_NAME }}"

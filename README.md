@@ -11,7 +11,7 @@ This collection provides a curated set of roles for managing Linux systems, cove
 ### Install the Collection
 
 ```bash
-ansible-galaxy collection install community.linux
+ansible-galaxy collection install iamenr0s.ansible_linux_collection
 ```
 
 ### Initialize Git Submodules
@@ -400,7 +400,7 @@ local pipeline commands and pull request checklist. This project follows the
 
 ## Security
 
-See [SECURITY.md](and .md) — GitHub private vulnerability reporting, no
+See [SECURITY.md](SECURITY.md) — GitHub private vulnerability reporting, no
 public issues for security bugs.
 
 ## License

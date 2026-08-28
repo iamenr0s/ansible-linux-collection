@@ -1,12 +1,12 @@
-namespace: community
-name: linux
+namespace: iamenr0s
+name: ansible_linux_collection
 version: 1.0.0
 description: A collection of Ansible roles for Linux system administration. Covers user/group management, package upgrades, swap, kernel configuration, cgroups, firewalld, /etc/hosts, containerd, CRI-O, and SSH hardening.
 readme: README.md
 authors:
   - iamenr0s <https://github.com/iamenr0s>
 license:
-  - GPL-2.0-or-later
+  - MIT
 license_file: LICENSE
 tags:
   - linux
