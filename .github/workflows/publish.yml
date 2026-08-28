@@ -28,7 +28,7 @@ jobs:
       - name: Publish collection
         env:
           ANSIBLE_GALAXY_API_KEY: ${{ secrets.GALAXY_API_KEY }}
-        run: ansible-galaxy collection publish $(ls *.tar.gz)
+        run: ansible-galaxy collection publish --token=$ANSIBLE_GALAXY_API_KEY $(ls *.tar.gz)
 
       - name: Verify publication
         run: |
