@@ -22,13 +22,16 @@ jobs:
       - name: Install dependencies
         run: pip install ansible ansible-lint
 
+      - name: Lint with ansible-lint
+        run: ansible-lint
+
       - name: Build collection
-        run: ansible-galaxy collection build .
+        run: ansible-galaxy collection build --output-path dist/ --force
 
       - name: Publish collection
         env:
           ANSIBLE_GALAXY_API_KEY: ${{ secrets.GALAXY_API_KEY }}
-        run: ansible-galaxy collection publish --token=$ANSIBLE_GALAXY_API_KEY $(ls *.tar.gz)
+        run: ansible-galaxy collection publish --token=$ANSIBLE_GALAXY_API_KEY dist/*.tar.gz
 
       - name: Verify publication
         run: |

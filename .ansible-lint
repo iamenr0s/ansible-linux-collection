@@ -1,0 +1,31 @@
+---
+# .ansible-lint
+#
+# https://ansible.readthedocs.io/projects/lint/configuring/
+
+profile: moderate
+
+# Vendored role submodules have their own lint history; don't re-lint them
+exclude_paths:
+  - .cache/
+  - .git/
+  - .github/
+  - changelogs/
+  - roles/
+
+# These checks are noisy for this collection's layout
+skip_list:
+  - role-name             # submodules have their own role names
+  - yaml[document-start]  # leading "---" is fine
+  - var-naming[no-role-prefix]  # not a single-role repo
+
+# Surface experimental/opt-in findings without failing the build
+warn_list:
+  - experimental
+  - jinja[spacing]
+  - fqcn[deep]
+  - schema[meta]
+
+use_default_rules: true
+mock_modules: []
+mock_roles: []
