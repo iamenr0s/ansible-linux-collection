@@ -1,3 +1,39 @@
 [submodule "roles/ansible-role-users"]
 	path = roles/ansible-role-users
 	url = https://github.com/iamenr0s/ansible-role-users.git
+
+[submodule "roles/ansible-role-upgrade"]
+	path = roles/ansible-role-upgrade
+	url = https://github.com/iamenr0s/ansible-role-upgrade.git
+
+[submodule "roles/ansible-role-swap"]
+	path = roles/ansible-role-swap
+	url = https://github.com/iamenr0s/ansible-role-swap.git
+
+[submodule "roles/ansible-role-cri-o"]
+	path = roles/ansible-role-cri-o
+	url = https://github.com/iamenr0s/ansible-role-cri-o.git
+
+[submodule "roles/ansible-role-etc-hosts"]
+	path = roles/ansible-role-etc-hosts
+	url = https://github.com/iamenr0s/ansible-role-etc-hosts.git
+
+[submodule "roles/ansible-role-firewalld"]
+	path = roles/ansible-role-firewalld
+	url = https://github.com/iamenr0s/ansible-role-firewalld.git
+
+[submodule "roles/ansible-role-containerd"]
+	path = roles/ansible-role-containerd
+	url = https://github.com/iamenr0s/ansible-role-containerd.git
+
+[submodule "roles/ansible-role-ssh-hardening"]
+	path = roles/ansible-role-ssh-hardening
+	url = https://github.com/iamenr0s/ansible-role-ssh-hardening.git
+
+[submodule "roles/ansible-role-kernel-configuration"]
+	path = roles/ansible-role-kernel-configuration
+	url = https://github.com/iamenr0s/ansible-role-kernel-configuration.git
+
+[submodule "roles/ansible-role-cgroup"]
+	path = roles/ansible-role-cgroup
+	url = https://github.com/iamenr0s/ansible-role-cgroup.git
