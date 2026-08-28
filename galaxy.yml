@@ -5,8 +5,6 @@ description: A collection of Ansible roles for Linux system administration. Cove
 readme: README.md
 authors:
   - iamenr0s <https://github.com/iamenr0s>
-license:
-  - MIT
 license_file: LICENSE
 tags:
   - linux
