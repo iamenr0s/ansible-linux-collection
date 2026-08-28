@@ -1,10 +1,10 @@
 namespace: community
 name: linux
 version: 1.0.0
-description: A collection of Ansible roles and modules for Linux system administration, including user and group management
+description: A collection of Ansible roles for Linux system administration. Covers user/group management, package upgrades, swap, kernel configuration, cgroups, firewalld, /etc/hosts, containerd, CRI-O, and SSH hardening.
 readme: README.md
 authors:
-  - Your Name <your.email@example.com>
+  - iamenr0s <https://github.com/iamenr0s>
 license:
   - GPL-2.0-or-later
 license_file: LICENSE
@@ -17,17 +17,33 @@ tags:
   - groups
   - security
   - ssh
+  - hardening
+  - upgrade
+  - swap
+  - kernel
+  - cgroup
+  - firewalld
+  - networking
+  - etc-hosts
+  - containerd
+  - cri-o
+  - containers
+  - kubernetes
 dependencies:
   ansible.posix: '>=1.0.0'
   community.general: '>=1.0.0'
-repository: https://github.com/yourusername/ansible-linux-collection
-homepage: https://github.com/yourusername/ansible-linux-collection
-issues: https://github.com/yourusername/ansible-linux-collection/issues
-documentation: https://github.com/yourusername/ansible-linux-collection/blob/main/README.md
+repository: https://github.com/iamenr0s/ansible-linux-collection
+homepage: https://github.com/iamenr0s/ansible-linux-collection
+issues: https://github.com/iamenr0s/ansible-linux-collection/issues
+documentation: https://github.com/iamenr0s/ansible-linux-collection/blob/main/README.md
 build_ignore:
   - '*.tar.gz'
   - '.git'
-  - '.gitignore'
+  - '.git*'
+  - '**/.git'
+  - '**/.git*'
+  - '**/.github'
+  - '**/.vscode'
   - '.DS_Store'
   - 'tests/output'
   - '.pytest_cache'
