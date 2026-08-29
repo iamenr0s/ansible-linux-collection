@@ -1,0 +1,36 @@
+---
+name: Sync Role Submodules
+
+on:
+  schedule:
+    - cron: '17 3 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      - name: Update submodules to latest upstream
+        run: git submodule update --remote --merge
+
+      - name: Create pull request if roles changed
+        uses: peter-evans/create-pull-request@v7
+        with:
+          commit-message: "chore: sync role submodules to latest upstream"
+          title: "chore: sync role submodules to latest upstream"
+          body: |
+            Automated daily check for new commits on the upstream `ansible-role-*` repositories.
+
+            Review the submodule diffs below before merging.
+          branch: chore/sync-submodules
+          delete-branch: true
